@@ -1,0 +1,21 @@
+import { projects } from "../data/projects";
+import ProjectCard from "./ProjectCard";
+
+function Projects() {
+  return (
+    <section id="featured-projects" className="projects">
+      <h1>Featured Projects</h1>
+
+      <div className="projects-grid">
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.title}
+            project={project}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export default Projects;
