@@ -1,3 +1,17 @@
+:root {
+  --bg: #0d0e0f;
+  --surface: #181c22;
+
+  --text: #f5f4ef;
+  --muted: #a8adb4;
+
+  --orange: #d85a30;
+  --red: #e84a5f;
+  --yellow: #ffd23f;
+  --blue: #3a86ff;
+  --green: #9ece6a;
+}
+
 *,
 *::before,
 *::after {
@@ -12,7 +26,7 @@ html {
 
 body {
   min-height: 100vh;
-  background: #0b0b0b;
+  background: var(--bg);
   color: #f5f5f5;
   font-family: "Inter", sans-serif;
 }
@@ -24,7 +38,16 @@ img {
 
 h1 {
   font-size: clamp(2rem, 3vw, 4rem);
+  color: var(--green);
   line-height: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.featured h1 {
+  font-size: 2.2rem;
 }
 
 h2 {
@@ -32,7 +55,7 @@ h2 {
 }
 
 p {
-  color: #b3b3b3;
+  color: mintcream;
   line-height: 1.7;
 }
 
@@ -43,7 +66,7 @@ a {
 }
 
 a:hover {
-  color: #ffffff;
+  color: var(--red);
 }
 
 main {
@@ -60,8 +83,8 @@ section {
   position: sticky;
   top: 0;
 
-  backdrop-filter: blur(12px);
-  background: rgba(20, 20, 20, 0.75);
+  backdrop-filter: blur(3px);
+  background: rgba(36, 40, 40, 0.75);
 
   z-index: 100;
   display: flex;
@@ -90,26 +113,47 @@ section {
 .hero-subtitle {
   padding-top: 1rem;
 }
-
+.hero p {
+  font-size: 1.2rem;
+}
 .hero-links {
   display: flex;
   padding: 1rem 0;
   gap: 1.5rem;
 }
 
+.featured {
+  padding: 2rem;
+  position: relative;
+}
+.featured::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(to left, var(--bg), transparent);
+  pointer-events: none;
+}
+.featured-scroll {
+  display: flex;
+  gap: 2rem;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding-block: 2rem;
+}
+
+.featured-scroll > * {
+  flex: 0 0 350px;
+}
+
 .projects {
   padding-inline: 2rem;
 }
-.project-card {
-  overflow: hidden;
 
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border: 1px solid #222;
-  background: #111;
-}
 .project-preview {
   width: 100%;
   aspect-ratio: 16 / 10;
@@ -120,30 +164,12 @@ section {
 
   border-radius: 4px;
 }
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   padding-block: 2rem;
-}
-.project-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding: 1.5rem;
-}
-.tech {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.tech span {
-  padding: 0.25rem 0.6rem;
-  border: 1px solid #333;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  color: #bdbdbd;
 }
 
 .links {

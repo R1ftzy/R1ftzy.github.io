@@ -5,17 +5,17 @@ function Hero() {
   return (
     <section className="hero">
       <div>
-        <h1>Hi, I'm Ronik. =D</h1>
+        <h1>Hi, I'm Ronik.</h1>
 
         <p className="hero-subtitle">
           {getAge(new Date(2007, 9, 13))} y/o developer
         </p>
 
-        <p>Currently studying Computer Science at IIIT Guwahati.</p>
+        <p>Computer Science @ IIIT Guwahati.</p>
 
         <p>
-          I build random things that seem fun enough to start and stupid enough
-          to finish.
+          I love computer graphics, low-level programming and building things
+          that seem fun enough to start and stupid enough to finish.
         </p>
 
         <div className="hero-links">
