@@ -100,6 +100,19 @@ section {
   list-style: none;
 }
 
+@media (max-width: 768px) {
+  main {
+    padding-top: 0.5rem;
+    padding-inline: 0rem;
+  }
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+  .navbar ul {
+    gap: 1rem;
+  }
+}
+
 ::selection {
   background: #ffffff;
   color: #0b0b0b;
