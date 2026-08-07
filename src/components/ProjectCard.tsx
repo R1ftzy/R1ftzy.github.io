@@ -11,7 +11,7 @@ type ProjectCardProps = {
 
 function ProjectCard({ project }: ProjectCardProps) {
   const brand = BRANDS[project.brand];
-
+  const BrandIcon = brand.icon;
   return (
     <article
       className="cartridge"
@@ -21,30 +21,24 @@ function ProjectCard({ project }: ProjectCardProps) {
         } as CSSProperties
       }
     >
-      {/* Plastic shell details */}
       <div className="cartridge-grips" />
       <div className="cartridge-notch" />
       <div className="cartridge-arrow" />
 
-      {/* Label */}
       <div className="cartridge-label">
-        {/* Cover Art */}
         <div className="cartridge-cover">
           {project.video ? (
             <video autoPlay muted loop playsInline>
               <source src={project.video} type="video/mp4" />
             </video>
           ) : (
-            project.image && (
-              <img src={project.image} alt={project.title} />
-            )
+            project.image && <img src={project.image} alt={project.title} />
           )}
 
-          {/* Everything sits on top of the cover */}
           <div className="cartridge-overlay">
             <header className="cartridge-header">
               <div className="cartridge-brand">
-                <span>{brand.name}</span>
+                <BrandIcon className="brand-icon" />
                 <div className="brand-line" />
               </div>
 

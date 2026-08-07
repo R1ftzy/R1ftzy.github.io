@@ -1,32 +1,42 @@
+import type { IconType } from "react-icons";
+import {
+  SiC,
+  SiJavascript,
+  SiOpengl,
+  SiReact,
+  SiGo,
+} from "react-icons/si";
+import { FaWindows } from "react-icons/fa";
+
 export type Brand = {
-  name: string;
+  icon: IconType;
   color: string;
 };
 
 export const BRANDS = {
   C: {
-    name: "C",
+    icon: SiC,
     color: "#7097cd",
   },
+  JS: {
+    icon: SiJavascript,
+    color: "#F0DB4F",
+  },
   OpenGL: {
-    name: "OpenGL",
+    icon: SiOpengl,
     color: "#41c13d",
   },
   React: {
-    name: "React",
+    icon: SiReact,
     color: "#61DAFB",
   },
   Go: {
-    name: "Go",
+    icon: SiGo,
     color: "#00ADD8",
   },
   Win32: {
-    name: "Win32",
+    icon: FaWindows,
     color: "#6ec439",
-  },
-  SDL2: {
-    name: "SDL2",
-    color: "#F59E0B",
   },
 } as const;
 
@@ -73,6 +83,18 @@ export const projects: Project[] = [
     github: "https://github.com/R1ftzy/WinFetchPlus",
     featured: true,
     image: "/images/winfetch.png",
+  },
+  {
+    title: "Last.fm-card",
+    description: "Now playing song card for GitHub profiles",
+
+    brand: "JS",
+
+    tech: [""],
+
+    github: "https://github.com/R1ftzy/Last.fm-card",
+    featured: true,
+    image: "/images/playing.png",
   },
   {
     title: "Simple Edit",
