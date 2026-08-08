@@ -212,6 +212,18 @@ section {
   padding-block: 2rem;
 }
 
+.project-card--empty {
+  width: 300px;
+  max-width: 100%;
+  aspect-ratio: 300 / 387;
+
+  box-sizing: border-box;
+
+  background: #181818;
+  border: 2px solid #292929;
+  border-radius: 6px;
+}
+
 @media (max-width: 768px) {
   .projects {
     padding-inline: 2rem;
