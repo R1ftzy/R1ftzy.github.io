@@ -165,18 +165,6 @@ section {
   position: relative;
 }
 
-.featured-shadow {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 80px;
-  height: 100%;
-  background: linear-gradient(to left, var(--bg), transparent);
-  pointer-events: none;
-  z-index: 10;
-  animation: shadow-in 1s ease forwards;
-}
 .featured-scroll {
   display: flex;
   gap: 2rem;
@@ -192,11 +180,11 @@ section {
   -webkit-mask-image: linear-gradient(
     to right,
     black 0%,
-    black 75%,
+    black 80%,
     transparent 100%
   );
 
-  mask-image: linear-gradient(to right, black 0%, black 75%, transparent 100%);
+  mask-image: linear-gradient(to right, black 0%, black 80%, transparent 100%);
 }
 
 .featured-scroll > * {
@@ -255,16 +243,6 @@ section {
   flex-direction: column;
   gap: 1.5rem;
   view-transition-name: graph;
-}
-
-@keyframes shadow-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 ::view-transition-old(hero),
