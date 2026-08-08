@@ -7,7 +7,7 @@ function Projects() {
   const emptyCards = Math.max(0, MIN_PROJECTS - projects.length);
   return (
     <section id="projects" className="projects">
-      <h1>Projects</h1>
+      <h1>projects.</h1>
 
       <div className="projects-grid">
         {projects.map((project) => (

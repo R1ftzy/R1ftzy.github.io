@@ -6,7 +6,7 @@ export default function Featured() {
 
   return (
     <section id="featured" className="featured">
-      <h1>projects</h1>
+      <h1>projects.</h1>
       <div className="featured-wrapper">
         <div className="featured-scroll">
           {featured.map((project, i) => (

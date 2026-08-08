@@ -9,12 +9,9 @@ export default function Navbar() {
         <Link to="/projects" viewTransition>
           Projects
         </Link>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
+        <Link to="/contacts" viewTransition>
+          Contact
+        </Link>
       </ul>
     </nav>
   );

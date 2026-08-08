@@ -5,13 +5,15 @@ function Hero() {
   return (
     <section className="hero">
       <div>
-        <h1>Hi, I'm Ronik.</h1>
+        <h1>hi, I'm Ronik.</h1>
 
         <p className="hero-subtitle">
-          {getAge(new Date(2007, 9, 13))} y/o developer
+          {getAge(new Date(2007, 9, 13))} y/o developer from India.
         </p>
 
-        <p>Computer Science @ IIIT Guwahati.</p>
+        <p style={{ marginLeft: "1px", fontSize: "0.9rem", color: "#b2c4aa" }}>
+          computer science @ IIIT Guwahati
+        </p>
 
         <p>
           I love computer graphics, low-level programming and building things

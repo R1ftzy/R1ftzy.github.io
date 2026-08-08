@@ -3,7 +3,7 @@ import { GitHubCalendar } from "react-github-calendar";
 export default function GithubGraph() {
   return (
     <section className="github-graph">
-      <h1>github activity</h1>
+      <h1>github activity.</h1>
 
       <GitHubCalendar
         username="R1ftzy"

@@ -1,6 +1,6 @@
 :root {
   --bg: #0d0e0f;
-  --surface: #181c22;
+  --surface: rgba(36, 40, 40, 0.75);
 
   --text: #f5f4ef;
   --muted: #a8adb4;
@@ -141,6 +141,7 @@ section {
 .hero {
   max-width: 700px;
   padding: 2rem;
+  view-transition-name: hero;
 }
 
 .hero-subtitle {
@@ -157,6 +158,7 @@ section {
 
 .featured {
   padding: 2rem;
+  view-transition-name: projects;
 }
 
 .featured-wrapper {
@@ -173,7 +175,7 @@ section {
   background: linear-gradient(to left, var(--bg), transparent);
   pointer-events: none;
   z-index: 10;
-  animation: shadow-in 5s ease forwards;
+  animation: shadow-in 1s ease forwards;
 }
 .featured-scroll {
   display: flex;
@@ -202,7 +204,7 @@ section {
 }
 
 .projects {
-  padding-inline: 6rem;
+  padding-inline: 5rem;
 }
 
 .projects-grid {
@@ -252,6 +254,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  view-transition-name: graph;
 }
 
 @keyframes shadow-in {
@@ -264,15 +267,19 @@ section {
   }
 }
 
-::view-transition-old(root) {
-  animation: fade-out 1s ease forwards;
+::view-transition-old(hero),
+::view-transition-old(projects),
+::view-transition-old(graph) {
+  animation: fade-out 250ms ease forwards;
 }
 
-::view-transition-new(root) {
-  animation: fade-in 1s ease forwards;
+::view-transition-new(hero),
+::view-transition-new(projects),
+::view-transition-new(graph) {
+  animation: fade-in 250ms ease forwards;
 }
 
-@keyframes slide-out {
+@keyframes fade-out {
   from {
     opacity: 1;
   }
@@ -282,7 +289,7 @@ section {
   }
 }
 
-@keyframes slide-in {
+@keyframes fade-in {
   from {
     opacity: 0;
   }
