@@ -125,10 +125,11 @@ section {
     padding-inline: 0rem;
   }
   .navbar {
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
   }
   .navbar ul {
-    gap: 1rem;
+    gap: 0.5rem;
+    font-size: 0.9rem;
   }
 }
 
