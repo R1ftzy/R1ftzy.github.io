@@ -18,6 +18,7 @@ function ProjectCard({ project }: ProjectCardProps) {
       style={
         {
           "--accent": brand.color,
+          viewTransitionName: `project-${project.id}`,
         } as CSSProperties
       }
     >
@@ -38,7 +39,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           <div className="cartridge-overlay">
             <header className="cartridge-header">
               <div className="cartridge-brand">
-                <BrandIcon className="brand-icon" />
+                <BrandIcon className={`brand-icon ${project.brand === "Go" ? "go-icon" : ""}`} />
                 <div className="brand-line" />
               </div>
 

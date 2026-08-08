@@ -1,11 +1,5 @@
 import type { IconType } from "react-icons";
-import {
-  SiC,
-  SiJavascript,
-  SiOpengl,
-  SiReact,
-  SiGo,
-} from "react-icons/si";
+import { SiC, SiJavascript, SiOpengl, SiReact, SiGo } from "react-icons/si";
 import { FaWindows } from "react-icons/fa";
 
 export type Brand = {
@@ -16,7 +10,7 @@ export type Brand = {
 export const BRANDS = {
   C: {
     icon: SiC,
-    color: "#7097cd",
+    color: "#3e6cad",
   },
   JS: {
     icon: SiJavascript,
@@ -43,6 +37,8 @@ export const BRANDS = {
 export type BrandName = keyof typeof BRANDS;
 
 export type Project = {
+  id: number;
+
   title: string;
   description: string;
 
@@ -61,6 +57,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 1,
     title: "Rasterbator",
     description: "Software rasterizer written in C.",
 
@@ -73,6 +70,8 @@ export const projects: Project[] = [
     video: "/videos/raster.mp4",
   },
   {
+    id: 2,
+
     title: "WinFetch",
     description: "A Windows system information tool.",
 
@@ -85,6 +84,22 @@ export const projects: Project[] = [
     image: "/images/winfetch.png",
   },
   {
+    id: 3,
+
+    title: "Minesweeper",
+    description: "Fast TUI Minesweeper in GO",
+
+    brand: "Go",
+
+    tech: ["Bubble Tea"],
+
+    github: "https://github.com/R1ftzy/Minesweeper",
+    featured: true,
+    image: "/images/minesweeper.png",
+  },
+  {
+    id: 4,
+
     title: "Last.fm-card",
     description: "Now playing song card for GitHub profiles",
 
@@ -97,6 +112,8 @@ export const projects: Project[] = [
     image: "/images/playing.png",
   },
   {
+    id: 5,
+
     title: "Simple Edit",
     description: "A lightweight terminal text editor.",
 

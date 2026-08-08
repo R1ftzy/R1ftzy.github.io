@@ -156,9 +156,13 @@ section {
 
 .featured {
   padding: 2rem;
+}
+
+.featured-wrapper {
   position: relative;
 }
-.featured::after {
+
+.featured-shadow {
   content: "";
   position: absolute;
   right: 0;
@@ -167,6 +171,8 @@ section {
   height: 100%;
   background: linear-gradient(to left, var(--bg), transparent);
   pointer-events: none;
+  z-index: 10;
+  animation: shadow-in 5s ease forwards;
 }
 .featured-scroll {
   display: flex;
@@ -176,6 +182,18 @@ section {
   overflow-y: hidden;
 
   padding-block: 2rem;
+
+  position: relative;
+  z-index: 1;
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 75%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(to right, black 0%, black 75%, transparent 100%);
 }
 
 .featured-scroll > * {
@@ -183,25 +201,21 @@ section {
 }
 
 .projects {
-  padding-inline: 2rem;
-}
-
-.project-preview {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  object-position: center;
-
-  display: block;
-
-  border-radius: 4px;
+  padding-inline: 6rem;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: center;
   gap: 2rem;
   padding-block: 2rem;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding-inline: 2rem;
+  }
 }
 
 .links {
@@ -225,4 +239,42 @@ section {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+@keyframes shadow-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+::view-transition-old(root) {
+  animation: fade-out 1s ease forwards;
+}
+
+::view-transition-new(root) {
+  animation: fade-in 1s ease forwards;
+}
+
+@keyframes slide-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

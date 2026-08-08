@@ -158,7 +158,12 @@
 
   letter-spacing: -0.04em;
 }
-
+.go-icon {
+  margin-top: -12px;
+  margin-left: -12px;
+  font-size: 3.2rem;
+  margin-bottom: -10px;
+}
 .brand-line {
   margin-top: 3px;
   width: 32px;
