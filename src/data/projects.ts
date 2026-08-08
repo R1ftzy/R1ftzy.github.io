@@ -105,7 +105,7 @@ export const projects: Project[] = [
 
     brand: "JS",
 
-    tech: [""],
+    tech: ["web"],
 
     github: "https://github.com/R1ftzy/Last.fm-card",
     featured: true,
