@@ -89,7 +89,7 @@
   border-radius: 5px;
 
   background: rgba(36, 40, 40, 0.75);
-  color: #e84a5f;
+  color: var(--red);
 
   font: inherit;
   font-size: 0.85rem;
@@ -103,7 +103,7 @@
 }
 
 .contact button:hover {
-  background: #e84a5f;
+  background: var(--red);
   color: #182235;
 }
 

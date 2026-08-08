@@ -1,6 +1,8 @@
 .cartridge {
   --accent: #79b638;
 
+  font-family: "Inter", sans-serif;
+
   max-width: 300px;
 
   position: relative;
@@ -183,7 +185,7 @@
 }
 
 .cartridge-links a:hover {
-  color: var(--accent);
+  color: var(--red);
 }
 
 /* ========================= */
