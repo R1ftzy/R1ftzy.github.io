@@ -10,7 +10,7 @@ export type Brand = {
 export const BRANDS = {
   C: {
     icon: SiC,
-    color: "#3e6cad",
+    color: "#659be7",
   },
   JS: {
     icon: SiJavascript,
@@ -59,7 +59,7 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "Rasterbator",
-    description: "Software rasterizer written in C.",
+    description: "A Software rasterizer.",
 
     brand: "C",
 
@@ -72,57 +72,85 @@ export const projects: Project[] = [
   {
     id: 2,
 
+    title: "R1P-8",
+    description: "A Chip-8 interpreter.",
+
+    brand: "C",
+
+    tech: ["CHIP-8", "SDL"],
+
+    github: "https://github.com/R1ftzy/R1P-8",
+    featured: true,
+    image: "/images/c8.png",
+  },
+  {
+    id: 3,
+
+    title: "R1sh_",
+    description: "A POSIX shell.",
+
+    brand: "C",
+
+    tech: ["POSIX", "Win32"],
+
+    github: "https://github.com/R1ftzy/R1sh_",
+    featured: true,
+    image: "/images/shell.png",
+  },
+  {
+    id: 4,
+
     title: "WinFetch",
-    description: "A Windows system information tool.",
+    description: "A Win32 sysinfo tool.",
 
     brand: "C",
 
     tech: ["Win32"],
 
     github: "https://github.com/R1ftzy/WinFetchPlus",
-    featured: true,
+    featured: false,
     image: "/images/winfetch.png",
   },
   {
-    id: 3,
+    id: 5,
 
     title: "Minesweeper",
-    description: "Fast TUI Minesweeper in GO",
+    description: "TUI Minesweeper.",
 
     brand: "Go",
 
     tech: ["Bubble Tea"],
 
     github: "https://github.com/R1ftzy/Minesweeper",
-    featured: true,
+    featured: false,
     image: "/images/minesweeper.png",
   },
   {
-    id: 4,
+    id: 6,
 
     title: "Last.fm-card",
-    description: "Now playing song card for GitHub profiles",
+    description: "Now playing song card.",
 
     brand: "JS",
 
     tech: ["Web"],
 
     github: "https://github.com/R1ftzy/Last.fm-card",
-    featured: true,
+    featured: false,
     image: "/images/playing.png",
   },
   {
-    id: 5,
+    id: 7,
 
     title: "Simple Edit",
-    description: "A lightweight terminal text editor.",
+    description: "TUI text editor.",
 
     brand: "C",
 
     tech: ["Win32"],
 
     github: "https://github.com/R1ftzy/simple-edit",
-    featured: true,
+    featured: false,
     image: "/images/simple-edit.png",
   },
 ];
