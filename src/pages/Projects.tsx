@@ -2,7 +2,7 @@ import { projects } from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
 
 function Projects() {
-  const MIN_PROJECTS = 8;
+  const MIN_PROJECTS = 12;
 
   const emptyCards = Math.max(0, MIN_PROJECTS - projects.length);
   return (

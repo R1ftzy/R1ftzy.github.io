@@ -8,7 +8,7 @@ function Hero() {
         <h1>hi, I'm Ronik.</h1>
 
         <p className="hero-subtitle">
-          {getAge(new Date(2007, 10, 13))} y/o developer from India.
+          {getAge(new Date(2007, 9, 13))} y/o developer from India.
         </p>
 
         <p style={{ marginLeft: "1px", fontSize: "0.9rem", color: "#b2c4aa" }}>

@@ -5,7 +5,9 @@ export default function Navbar() {
     <nav className="navbar">
       <h2>R1ftzy</h2>
       <ul>
-        <Link to="/" viewTransition>Home</Link>
+        <Link to="/" viewTransition>
+          Home
+        </Link>
         <Link to="/projects" viewTransition>
           Projects
         </Link>
